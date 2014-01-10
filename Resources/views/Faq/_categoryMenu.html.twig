@@ -1,0 +1,8 @@
+{% set activeId = category.id|default(null) %}
+<ul>
+    {% for category in categories %}
+        <li class="{{ category.id == activeId ? 'active' }}">
+            <a href="{{ category.slug ? path('faq_show_slug', {slug: category.slug}) : path('faq_show', {id: category.id}) }}">{{ category.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

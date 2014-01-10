@@ -1,0 +1,11 @@
+<div>
+{% for faq in faqs %}
+    <h3>{{ faq.question }}</h3>
+    <div>
+        <p>{{ faq.answer }}</p>
+    </div>
+{% endfor %}
+</div>
+<div class="navigation">
+    {{ knp_pagination_render(faqs) }}
+</div>

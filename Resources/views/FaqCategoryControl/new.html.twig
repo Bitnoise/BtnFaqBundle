@@ -1,0 +1,28 @@
+{% from 'BtnCrudBundle::breadcrumb.html.twig' import breadcrumb %}
+{% extends '::control.html.twig' %}
+
+{% form_theme form 'BtnCrudBundle:Form:fields.html.twig' %}
+
+{% block content %}
+
+    <form action="{{ path('cp_faqcategory_create') }}" method="post" {{ form_enctype(form) }} class="well form-horizontal" novalidate>
+          <fieldset>
+              <legend>{% trans %}faq_category.create{% endtrans %}</legend>
+              {{ form_widget(form) }}
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-success">{% trans %}crud.create{% endtrans %}</button>
+              </div>
+            </div>
+        </fieldset>
+    </form>
+
+            <a href="{{ path('cp_faqcategory') }}" class="btn">
+        &laquo; {% trans %}crud.back{% endtrans %}
+    </a>
+
+{% endblock %}
+
+{% block breadcrumb %}
+    {{ breadcrumb({'cp_faqcategory': 'crud.breadcrumb.list', 'cp_faqcategory_new': 'crud.breadcrumb.new'}) }}
+{% endblock %}

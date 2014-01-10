@@ -1,0 +1,20 @@
+services:
+    btn.faq.content_provider:
+        class: Btn\FaqBundle\Service\FaqContentProvider
+        arguments:
+            router: '@router'
+            em:     '@doctrine.orm.entity_manager'
+    btn.faq.manager:
+        class: Btn\FaqBundle\Model\FaqManager
+        arguments:
+            em:          '@doctrine.orm.entity_manager'
+            paginator:   '@knp_paginator'
+            twig:        '@twig'
+            formFactory: '@form.factory'
+    btn.faqcategory.manager:
+        class: Btn\FaqBundle\Model\FaqCategoryManager
+        arguments:
+            em:          '@doctrine.orm.entity_manager'
+            paginator:   '@knp_paginator'
+            twig:        '@twig'
+            formFactory: '@form.factory'

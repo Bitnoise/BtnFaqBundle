@@ -1,0 +1,27 @@
+faq:
+    faq: Faq
+    edit: Faq edit
+    list: Faq list
+    create: Faq creation
+    id: Id
+    question: Question
+    answer: Answer
+    visible: Visible
+    position: Position
+    category: Category
+    created_at: Created
+    updated_at: Updated
+    type_here: Type here
+    category_empty_value: Select category
+    filter_category: 'Category: '
+    filter_category_all: All
+
+faq_category:
+    edit: Faq Category edit
+    list: Faq Category list
+    id: Id
+    title: Title
+    slug: Slug
+    visible: Visible
+    position: Position
+    create: FaqCategory creation

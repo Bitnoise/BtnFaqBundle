@@ -1,0 +1,13 @@
+{% extends 'BtnFaqBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ category.title }}
+{% endblock %}
+
+{% block btn_faq_menu %}
+    {% include 'BtnFaqBundle:Faq:_categoryMenu.html.twig' %}
+{% endblock %}
+
+{% block btn_faq_content %}
+    {% include 'BtnFaqBundle:Faq:_faqList.html.twig' %}
+{% endblock %}

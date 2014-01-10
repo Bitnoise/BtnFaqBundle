@@ -1,0 +1,27 @@
+faq:
+    faq: Faq
+    edit: Edycja Faq
+    list: Lista Faq
+    create: Dodaj Faq
+    id: Id
+    question: Pytanie
+    answer: Odpowiedź
+    visible: Widoczny
+    position: Pozycja
+    category: Kategoria
+    created_at: Utworzone
+    updated_at: Zaktualizowane
+    type_here: Wpisz tutaj
+    category_empty_value: Wybierz kategorię
+    filter_category: 'Kategoria: '
+    filter_category_all: Wszystkie
+
+faq_category:
+    edit: Edycja kategorii Faq
+    list: Lista kategorii Faq
+    id: Id
+    title: Tytuł
+    slug: Slug
+    visible: Widoczny
+    position: Pozycja
+    create: Dodaj kategorię Faq
