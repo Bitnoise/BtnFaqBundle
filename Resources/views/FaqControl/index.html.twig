@@ -38,8 +38,8 @@
                 <td>{% if entity.createdAt %}{{ entity.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.updatedAt %}{{ entity.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>
-                    <a href="{{ path('cp_faq_show', { 'id': entity.id }) }}" class="btn btn-sm btn-primary">{% trans %}crud.show{% endtrans %}</a>
-                    <a href="{{ path('cp_faq_edit', { 'id': entity.id }) }}" class="btn btn-sm btn-primary">{% trans %}crud.edit{% endtrans %}</a>
+                    <a href="{{ path('cp_faq_show', { 'id': entity.id }) }}" class="btn btn-sm btn-primary button-show">{% trans %}crud.show{% endtrans %}</a>
+                    <a href="{{ path('cp_faq_edit', { 'id': entity.id }) }}" class="btn btn-sm btn-primary button-edit">{% trans %}crud.edit{% endtrans %}</a>
                 </td>
             </tr>
         {% endfor %}
