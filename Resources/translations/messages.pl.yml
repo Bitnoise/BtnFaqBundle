@@ -17,6 +17,7 @@ faq:
     filter_category_all: Wszystkie
 
 faq_category:
+    faq_category: Kategoria Faq
     edit: Edycja kategorii Faq
     list: Lista kategorii Faq
     id: Id
