@@ -39,8 +39,8 @@ class FaqCategory
      * @var string
      *
      * @ORM\Column(name="slug", type="string", length=64, nullable=false)
-     * @Assert\Regex(pattern="/^[_\-a-z0-9]+$/", message="Slug contains only digits, small letters and chars like '-', '_'")
-     * @Assert\NotBlank()
+     * @Assert\Regex(pattern="/^[_\-a-z0-9]+$/")
+     * @Assert\NotBlank(message="Slug contains only digits, small letters and chars like '-', '_'")
      */
     private $slug;
 
