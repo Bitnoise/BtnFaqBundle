@@ -3,6 +3,7 @@
 namespace Btn\FaqBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Faq
@@ -32,6 +33,7 @@ class Faq
      * @var string
      *
      * @ORM\Column(name="question", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $question;
 
@@ -39,6 +41,7 @@ class Faq
      * @var string
      *
      * @ORM\Column(name="answer", type="text", nullable=true)
+     * @Assert\NotBlank()
      */
     private $answer;
 
@@ -53,6 +56,7 @@ class Faq
      * @var integer
      *
      * @ORM\Column(name="position", type="smallint", nullable=true)
+     * @Assert\NotBlank(message="Position should be a number")
      */
     private $position;
 

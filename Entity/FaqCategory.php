@@ -3,6 +3,7 @@
 namespace Btn\FaqBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Btn\BaseBundle\Util\Text;
 
@@ -30,6 +31,7 @@ class FaqCategory
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=64, nullable=false)
+     * @Assert\NotBlank()
      */
     private $title;
 
@@ -37,6 +39,8 @@ class FaqCategory
      * @var string
      *
      * @ORM\Column(name="slug", type="string", length=64, nullable=false)
+     * @Assert\Regex(pattern="/^[_\-a-z0-9]+$/", message="Slug contains only digits, small letters and chars like '-', '_'")
+     * @Assert\NotBlank()
      */
     private $slug;
 
@@ -51,6 +55,7 @@ class FaqCategory
      * @var integer
      *
      * @ORM\Column(name="position", type="smallint", nullable=false)
+     * @Assert\NotBlank(message="Position should be a number")
      */
     private $position;
 
