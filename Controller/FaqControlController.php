@@ -86,7 +86,7 @@ class FaqControlController extends Controller
      *
      * @Route("/create", name="cp_faq_create")
      * @Method("POST")
-     * @Template("BtnFaqBundle:Faq:new.html.twig")
+     * @Template("BtnFaqBundle:FaqControl:new.html.twig")
      */
     public function createAction(Request $request)
     {
@@ -142,7 +142,7 @@ class FaqControlController extends Controller
      *
      * @Route("/{id}/update", name="cp_faq_update")
      * @Method("POST")
-     * @Template("BtnFaqBundle:Faq:edit.html.twig")
+     * @Template("BtnFaqBundle:FaqControl:edit.html.twig")
      */
     public function updateAction(Request $request, $id)
     {
