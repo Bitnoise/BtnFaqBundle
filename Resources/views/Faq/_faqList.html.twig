@@ -1,6 +1,6 @@
 <div>
 {% for faq in faqs %}
-    <h3 id="faq-question-{ faq.id }" >{{ faq.question }}</h3>
+    <h3 id="faq-question-{{ faq.id }}" >{{ faq.question }}</h3>
     <div>
         <p>{{ faq.answer }}</p>
     </div>
