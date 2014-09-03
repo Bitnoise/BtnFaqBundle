@@ -1,3 +1,6 @@
+parameters:
+    btn.faq.form.faq.class: Btn\FaqBundle\Form\FaqType
+
 services:
     btn.faq.content_provider:
         class: Btn\FaqBundle\Service\FaqContentProvider
@@ -18,3 +21,8 @@ services:
             paginator:   '@knp_paginator'
             twig:        '@twig'
             formFactory: '@form.factory'
+
+    btn.faq.form.faq:
+        class: %btn.faq.form.faq.class%
+        tags:
+            - { name: form.type, alias: btn_faqbundle_faq }

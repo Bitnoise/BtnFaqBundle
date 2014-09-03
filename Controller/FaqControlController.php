@@ -8,7 +8,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Btn\FaqBundle\Entity\Faq;
-use Btn\FaqBundle\Form\FaqType;
 use Btn\FaqBundle\Form\FaqFilterType;
 
 /**
@@ -73,7 +72,7 @@ class FaqControlController extends Controller
     public function newAction()
     {
         $entity = new Faq();
-        $form   = $this->createForm(new FaqType(), $entity);
+        $form   = $this->createForm('btn_faqbundle_faq', $entity);
 
         return array(
             'entity' => $entity,
@@ -91,7 +90,7 @@ class FaqControlController extends Controller
     public function createAction(Request $request)
     {
         $entity  = new Faq();
-        $form = $this->createForm(new FaqType(), $entity);
+        $form = $this->createForm('btn_faqbundle_faq', $entity);
         $form->bind($request);
 
         if ($form->isValid()) {
@@ -127,7 +126,7 @@ class FaqControlController extends Controller
             throw $this->createNotFoundException('Unable to find Faq entity.');
         }
 
-        $editForm = $this->createForm(new FaqType(), $entity);
+        $editForm = $this->createForm('btn_faqbundle_faq', $entity);
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
@@ -155,7 +154,7 @@ class FaqControlController extends Controller
         }
 
         $deleteForm = $this->createDeleteForm($id);
-        $editForm = $this->createForm(new FaqType(), $entity);
+        $editForm = $this->createForm('btn_faqbundle_faq', $entity);
         $editForm->bind($request);
 
         if ($editForm->isValid()) {
